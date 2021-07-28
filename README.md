@@ -1,5 +1,8 @@
 ![tailwind-nextjs-banner](/public/static/images/twitter-card.png)
 
+
+[![Node CI](https://github.com/94rain/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/94rain/portfolio/actions/workflows/deploy.yml)
+
 # Tailwind Nextjs Starter Blog
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/timlrx/tailwind-nextjs-starter-blog)
