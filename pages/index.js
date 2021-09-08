@@ -48,7 +48,7 @@ export default function Home({ posts }) {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              Hello, my name is Shuyang Ji. I am a junior undergraduate at the University of
+              Hello, my name is Shuyang Ji. I am a junior studying Mathematics and Computer Science at the University of
               Illinois at Urbana-Champaign.
             </p>
             <p>
