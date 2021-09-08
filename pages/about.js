@@ -35,14 +35,14 @@ export default function About() {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              Shuyang Ji is a junior undergraduate at the University of Illinois at
-              Urbana-Champaign.
+             Hello, my name is Shuyang Ji. I am a junior undergraduate at the University of
+              Illinois at Urbana-Champaign.
             </p>
             <p>
-              His interests broadly lie in the field of Systems and networking, Software Engineering
+             My interests broadly lie in the field of Systems and networking, Software Engineering
               and Programming languages.
             </p>
-            <p>He is a SysOp at MediaWiki.org and a wikimedia global rollbacker.</p>
+            <p>I serve a SysOp at MediaWiki.org and a wikimedia global rollbacker.</p>
             <p>[More information will be added here later]</p>
           </div>
         </div>

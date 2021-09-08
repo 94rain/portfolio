@@ -48,7 +48,7 @@ export default function Home({ posts }) {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              Hello, my name is Shuyang Ji. I am a rising junior undergraduate at the University of
+              Hello, my name is Shuyang Ji. I am a junior undergraduate at the University of
               Illinois at Urbana-Champaign.
             </p>
             <p>
@@ -60,7 +60,7 @@ export default function Home({ posts }) {
               These are just fancy ways to say that the community has given me some extra buttons to
               help with uncontroversial maintenance.
             </p>
-            <p>[More information will be added here later]</p>
+            <p></p>
           </div>
         </div>
       </div>
