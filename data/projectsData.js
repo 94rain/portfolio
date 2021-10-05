@@ -1,16 +1,16 @@
 const projectsData = [
   {
     title: 'Online Collaborative Editor',
-    description: `An online collaborative text editor built upon SpringBoot, Mybatis & Websocket`,
+    description: `An online collaborative text editor built upon SpringBoot, Mybatis & Websocket. [Due to the limitations of the free version of Heroku, it may take up to one minute to load the page initially]`,
     imgSrc: '/static/images/online-collaborative-editor.png',
-    href: 'http://doc.jishuyang.top/',
+    href: 'https://jsy-doc.herokuapp.com/',
   },
   {
     title: 'Concurrent caching web proxy',
     description: `Concurrent caching web proxy`,
-    imgSrc: '/static/images/time-machine.jpg',
-    href: 'https://github.com/94rain/concurrent-caching-web-proxy',
-    // href: '/blog/concurrent-caching-web-proxy',
+    imgSrc: '/static/images/proxy.png',
+    // href: 'https://github.com/94rain/concurrent-caching-web-proxy',
+    href: '/blog/concurrent-caching-web-proxy',
   },
   {
     title: 'AFCH-zhwp',
@@ -20,13 +20,13 @@ const projectsData = [
   },
   {
     title: 'TinyKV',
-    description: `A consistent, distributed key-value storage based on Raft (Still working in progress)`,
+    description: `A consistent, distributed key-value storage based on Raft (Working in progress)`,
     imgSrc: '/static/images/time-machine.jpg',
     // href: '/blog/tinykv',
   },
   {
     title: 'Simple Scheme',
-    description: `an interpreter for a minimalist dialect of Lisp (Course project, source code not available)`,
+    description: `an interpreter for a minimalist dialect of Lisp`,
     imgSrc: '/static/images/scheme.png',
     // href: '/blog/simple-scheme',
   },
