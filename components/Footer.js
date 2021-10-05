@@ -23,7 +23,7 @@ export default function Footer() {
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://github.com/94rain/portfolio">
-            Built upon Next.js & Tailwind CSS
+            Built upon Next.js & Tailwind CSS, deployed with Github Actions
           </Link>
         </div>
       </div>
