@@ -2,16 +2,20 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+/**
+ * @type {import('next/dist/next-server/server/config').NextConfig}
+ **/
 module.exports = withBundleAnalyzer({
   images: {
     loader: 'imgix',
-    path: 'https://example.com/myaccount/',
+    path: 'https://sji15.web.illinois.edu/',
   },
   reactStrictMode: true,
-  pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  future: {
-    webpack5: true,
+  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  eslint: {
+    dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
   },
+  experimental: { esmExternals: true },
   webpack: (config, { dev, isServer }) => {
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|mp4)$/i,

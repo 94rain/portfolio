@@ -1,9 +1,9 @@
-name: Build and depoly to CPanel
+name: Build and deploy to CPanel
 
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build:
