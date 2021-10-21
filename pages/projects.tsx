@@ -13,7 +13,7 @@ export default function Projects() {
             Projects
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-          "What I cannot create, I do not understand" -- Richard Feynman
+            "What I cannot create, I do not understand" -- Richard Feynman
           </p>
         </div>
         <div className="container py-12">

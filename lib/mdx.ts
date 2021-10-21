@@ -15,7 +15,7 @@ import remarkFootnotes from 'remark-footnotes'
 import remarkMath from 'remark-math'
 import remarkCodeTitles from './remark-code-title'
 import remarkTocHeadings from './remark-toc-headings'
-import remarkImgToJsx from './remark-img-to-jsx'
+// import remarkImgToJsx from './remark-img-to-jsx'
 // Rehype packages
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
@@ -82,7 +82,7 @@ export async function getFileBySlug<T>(type: 'authors' | 'blog', slug: string | 
         remarkCodeTitles,
         [remarkFootnotes, { inlineNotes: true }],
         remarkMath,
-        remarkImgToJsx,
+        // remarkImgToJsx,
       ]
       options.rehypePlugins = [
         ...(options.rehypePlugins ?? []),
