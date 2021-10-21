@@ -1,10 +1,14 @@
 import fs from 'fs'
-import { MDXRemote } from 'next-mdx-remote'
-import MDXComponents from '@/components/MDXComponents'
 import PageTitle from '@/components/PageTitle'
-import PostLayout from '@/layouts/PostLayout'
 import generateRss from '@/lib/generate-rss'
+import { MDXLayoutRenderer } from '@/components/MDXComponents'
 import { formatSlug, getAllFilesFrontMatter, getFileBySlug, getFiles } from '@/lib/mdx'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
+import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
+import { PostFrontMatter } from 'types/PostFrontMatter'
+import { Toc } from 'types/Toc'
+
+const DEFAULT_LAYOUT = 'PostLayout'
 
 export async function getStaticPaths() {
   const posts = getFiles('blog')
@@ -18,29 +22,61 @@ export async function getStaticPaths() {
   }
 }
 
-export async function getStaticProps({ params }) {
+// @ts-ignore
+export const getStaticProps: GetStaticProps<{
+  post: { mdxSource: string; toc: Toc; frontMatter: PostFrontMatter }
+  authorDetails: AuthorFrontMatter[]
+  prev?: { slug: string; title: string }
+  next?: { slug: string; title: string }
+}> = async ({ params }) => {
+  const slug = (params.slug as string[]).join('/')
   const allPosts = await getAllFilesFrontMatter('blog')
-  const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === params.slug.join('/'))
-  const prev = allPosts[postIndex + 1] || null
-  const next = allPosts[postIndex - 1] || null
-  const post = await getFileBySlug('blog', params.slug)
+  const postIndex = allPosts.findIndex((post) => formatSlug(post.slug) === slug)
+  const prev: { slug: string; title: string } = allPosts[postIndex + 1] || null
+  const next: { slug: string; title: string } = allPosts[postIndex - 1] || null
+  const post = await getFileBySlug<PostFrontMatter>('blog', slug)
+  // @ts-ignore
+  const authorList = post.frontMatter.authors || ['default']
+  const authorPromise = authorList.map(async (author) => {
+    const authorResults = await getFileBySlug<AuthorFrontMatter>('authors', [author])
+    return authorResults.frontMatter
+  })
+  const authorDetails = await Promise.all(authorPromise)
 
   // rss
   const rss = generateRss(allPosts)
-  fs.writeFileSync('./public/index.xml', rss)
+  fs.writeFileSync('./public/feed.xml', rss)
 
-  return { props: { post, prev, next } }
+  return {
+    props: {
+      post,
+      authorDetails,
+      prev,
+      next,
+    },
+  }
 }
 
-export default function Blog({ post, prev, next }) {
-  const { mdxSource, frontMatter } = post
+export default function Blog({
+  post,
+  authorDetails,
+  prev,
+  next,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
+  const { mdxSource, toc, frontMatter } = post
 
   return (
     <>
-      {frontMatter.draft !== true ? (
-        <PostLayout frontMatter={frontMatter} prev={prev} next={next}>
-          <MDXRemote {...mdxSource} components={MDXComponents} />
-        </PostLayout>
+      {'draft' in frontMatter && frontMatter.draft !== true ? (
+        <MDXLayoutRenderer
+          layout={frontMatter.layout || DEFAULT_LAYOUT}
+          toc={toc}
+          mdxSource={mdxSource}
+          frontMatter={frontMatter}
+          authorDetails={authorDetails}
+          prev={prev}
+          next={next}
+        />
       ) : (
         <div className="mt-24 text-center">
           <PageTitle>
