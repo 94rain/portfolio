@@ -2,7 +2,7 @@ import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 
-let isProduction = process.env.NODE_ENV === 'production'
+const isProduction = process.env.NODE_ENV === 'production'
 
 export default function Footer() {
   return (
@@ -34,8 +34,7 @@ export default function Footer() {
               <img src="//www.clustrmaps.com/map_v2.png?d=0KyBA0hHgu2NUQjPjlIMWsMIM-tfQA7W2X_o3OA7NW8&cl=ffffff" />
             </a>
           </div>
-          )
-        }
+        )}
       </div>
     </footer>
   )

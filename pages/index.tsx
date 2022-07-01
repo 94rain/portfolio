@@ -1,9 +1,7 @@
 import Link from '@/components/Link'
 import { PageSEO } from '@/components/SEO'
-import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import formatDate from '@/lib/utils/formatDate'
 import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 import NewsletterForm from '@/components/NewsletterForm'
@@ -20,60 +18,95 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="pt-6 pb-2 space-y-2 md:space-y-5"></div>
+      <div className="space-y-2 pt-6 pb-2 md:space-y-5"></div>
 
       <div className="items-start space-y-2 xl:grid xl:grid-cols-1 xl:gap-x-8 xl:space-y-0">
-        <div className="pt-4 pb-8 prose dark:prose-dark max-w-none xl:col-span-1"><h2>Hi, I am Shuyang 👋</h2></div>
-          <div className="pt-4 pb-8 prose dark:prose-dark max-w-none xl:col-span-1"><h3>Bio</h3>
-            <p>
-              Hello, my name is Shuyang. I am a rising senior undergraduate student studying Mathematics and Computer Science at
-              the University of Illinois at Urbana-Champaign. I expect to graduate in May 2023.
-            </p>
-          </div>
-
-          <div className="pt-4 pb-8 prose dark:prose-dark max-w-none xl:col-span-1"><h3>Career interests</h3>
-            <p className="text-blue-500 hover:text-blue-600">
-              I am actively seeking full-time software engineer opportunties starting between June and August 2023!
-            </p>
-            <p>
-              My interests broadly lie in the field of Systems and networking. I like designing and building systems that address practical problems, ranging from high-level large scale software systems to operating systems and architecture that support them.
-            </p>
-            <p>
-            <div className="prose dark:prose-dark max-w-none xl:col-span-1"><h5>My current projects including:</h5></div>
-              <li> An operating system that can run on RISC-V (personal) </li>
-              <li> Cross-System Data Plane Testing (research) </li>
-              <li> IoT (Internet of Things) virtualization (research) </li>
-            </p>
-            <p>
-            <div className="prose dark:prose-dark max-w-none xl:col-span-1"><h5>Some topics that I am also currently interested in exploring (more info):</h5></div>
-            <li> Facilitate the process of production diagnosis and recovery: (Underinvestigated) Enhance the observability of data-intensive software systems? </li>
-            <li> Infrastructure as Code: Terraform and Terraformer (reverse Terraform) </li>
-            <li> Improve Developer Experience from an HCI Perspective:{' '} <Link href="mailto:sji15@illinois.edu">
-              <a className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">sji15@illinois.edu</a>
-            </Link> </li>
+        <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
+          <h2>Hi, I am Shuyang 👋</h2>
+        </div>
+        <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
+          <h3>Bio</h3>
+          <p>
+            Hello, my name is Shuyang. I am a rising senior undergraduate student studying
+            Mathematics and Computer Science at the University of Illinois at Urbana-Champaign. I
+            expect to graduate in May 2023.
           </p>
-          </div>
+        </div>
 
-        
-        <div className="pt-4 pb-4 prose dark:prose-dark max-w-none xl:col-span-1"><h3>Contact</h3></div>
+        <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
+          <h3>Career interests</h3>
+          <p className="text-blue-500 hover:text-blue-600">
+            I am actively seeking full-time software engineer opportunties starting between June and
+            August 2023!
+          </p>
+          <p>
+            My interests broadly lie in the field of Systems and networking. I like designing and
+            building systems that address practical problems, ranging from high-level large scale
+            software systems to operating systems and architecture that support them.
+          </p>
+          <p>
+            <div className="prose max-w-none dark:prose-dark xl:col-span-1">
+              <h5>My current projects including:</h5>
+            </div>
+            <li> An operating system that can run on RISC-V (personal) </li>
+            <li> Cross-System Data Plane Testing (research) </li>
+            <li> IoT (Internet of Things) virtualization (research) </li>
+          </p>
+          <p>
+            <div className="prose max-w-none dark:prose-dark xl:col-span-1">
+              <h5>Some topics that I am also currently interested in exploring (more info):</h5>
+            </div>
+            <li>
+              {' '}
+              Facilitate the process of production diagnosis and recovery: (Underinvestigated)
+              Enhance the observability of data-intensive software systems?{' '}
+            </li>
+            <li> Infrastructure as Code: Terraform and Terraformer (reverse Terraform) </li>
+            <li>
+              {' '}
+              Improve Developer Experience from an HCI Perspective:{' '}
+              <Link href="mailto:sji15@illinois.edu">
+                <a className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
+                  sji15@illinois.edu
+                </a>
+              </Link>{' '}
+            </li>
+          </p>
+        </div>
+
+        <div className="prose max-w-none pt-4 pb-4 dark:prose-dark xl:col-span-1">
+          <h3>Contact</h3>
+        </div>
         <li className="dark:hover:text-blue-400">
-            Email:{' '}
-            <Link className="mr-3 text-blue-500 hover:text-blue-600 dark:hover:text-blue-400" href="mailto:sji15@illinois.edu">
-              <a>sji15@illinois.edu</a>
-            </Link>
-          </li>
-          <li className="dark:hover:text-blue-400">
-            GitHub:{' '}
-            <Link className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400" href="https://github.com/94rain" style={{textDecoration: 'none'}}>
-              <a>94rain</a>
-            </Link>
-          </li>
-          <li className="dark:hover:text-blue-400">
-            Linkedin:{' '}
-            <Link className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400" target="_blank" href="https://www.linkedin.com/in/shuyang-ji/" rel="noreferrer">
-              <a>Shuyang Ji</a>
-            </Link>
-          </li>
+          Email:{' '}
+          <Link
+            className="mr-3 text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+            href="mailto:sji15@illinois.edu"
+          >
+            <a>sji15@illinois.edu</a>
+          </Link>
+        </li>
+        <li className="dark:hover:text-blue-400">
+          GitHub:{' '}
+          <Link
+            className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+            href="https://github.com/94rain"
+            style={{ textDecoration: 'none' }}
+          >
+            <a>94rain</a>
+          </Link>
+        </li>
+        <li className="dark:hover:text-blue-400">
+          Linkedin:{' '}
+          <Link
+            className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+            target="_blank"
+            href="https://www.linkedin.com/in/shuyang-ji/"
+            rel="noreferrer"
+          >
+            <a>Shuyang Ji</a>
+          </Link>
+        </li>
       </div>
       {/* <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
