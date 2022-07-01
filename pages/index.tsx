@@ -20,61 +20,60 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="pt-6 pb-14 space-y-2 md:space-y-5"></div>
+      <div className="pt-6 pb-2 space-y-2 md:space-y-5"></div>
 
       <div className="items-start space-y-2 xl:grid xl:grid-cols-1 xl:gap-x-8 xl:space-y-0">
-        <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-1">
-          <h2>Shuyang Ji</h2>
-          <p>
-            Hello, my name is Shuyang Ji. I am a junior studying Mathematics and Computer Science at
-            the University of Illinois at Urbana-Champaign.
+        <div className="pt-4 pb-8 prose dark:prose-dark max-w-none xl:col-span-1"><h2>Hi, I am Shuyang Ji <span role="img" aria-label="waving hand" class="wave">👋</span></h2></div>
+          <div className="pt-4 pb-8 prose dark:prose-dark max-w-none xl:col-span-1"><h3>Bio</h3>
+            <p>
+              Hello, my name is Shuyang. I am a rising senior undergraduate student studying Mathematics and Computer Science at
+              the University of Illinois at Urbana-Champaign. I expect to graduate in May 2023.
+            </p>
+          </div>
+
+          <div className="pt-4 pb-8 prose dark:prose-dark max-w-none xl:col-span-1"><h3>Career interests</h3>
+            <p className="text-blue-500 hover:text-blue-600">
+              I am actively seeking full-time software engineer opportunties starting between June and August 2023!
+            </p>
+            <p>
+              My interests broadly lie in the field of Systems and networking. I like designing and building systems that address practical problems, ranging from high-level large scale software systems to operating systems and architecture that support them.
+            </p>
+            <p>
+            <div className="prose dark:prose-dark max-w-none xl:col-span-1"><h5>My current projects including:</h5></div>
+              <li> An operating system that can run on RISC-V (personal) </li>
+              <li> Cross-System Data Plane Testing (research) </li>
+              <li> IoT (Internet of Things) virtualization (research) </li>
+            </p>
+            <p>
+            <div className="prose dark:prose-dark max-w-none xl:col-span-1"><h5>Some topics that I am also currently interested in exploring (more info):</h5></div>
+            <li> Facilitate the process of production diagnosis and recovery: (Underinvestigated) Enhance the observability of data-intensive software systems? </li>
+            <li> Infrastructure as Code: Terraform and Terraformer (reverse Terraform) </li>
+            <li> Improve Developer Experience from an HCI Perspective:{' '}            <Link href="mailto:sji15@illinois.edu">
+              <a>sji15@illinois.edu</a>
+            </Link> </li>
           </p>
-          <p>
-            My interests broadly lie in the field of Systems and networking, Software Engineering
-            and Programming languages.
-          </p>
-        </div>
-        <div>
-          <li>
-            <a
-              className="mr-3 text-sm font-medium text-blue-500 hover:text-blue-600 dark:hover:text-blue-400 text-decoration: none"
-              href="./blog/biography"
-            >
-              More about me
-            </a>
-          </li>
-          <li>
+          </div>
+
+        
+        <div className="pt-4 pb-4 prose dark:prose-dark max-w-none xl:col-span-1"><h3>Contact</h3></div>
+        <li className="dark:hover:text-blue-400">
             Email:{' '}
-            <a
-              className="mr-3 text-sm font-medium text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-              href="mailto:sji15@illinois.edu"
-            >
-              sji15@illinois.edu
-            </a>
+            <Link className="mr-3 text-blue-500 hover:text-blue-600 dark:hover:text-blue-400" href="mailto:sji15@illinois.edu">
+              <a>sji15@illinois.edu</a>
+            </Link>
           </li>
-          <li>
+          <li className="dark:hover:text-blue-400">
             GitHub:{' '}
-            <a
-              className="mr-3 text-sm font-medium text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-              target="_blank"
-              href="https://github.com/94rain"
-              rel="noreferrer"
-            >
-              94rain
-            </a>
+            <Link className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400" href="https://github.com/94rain" style={{textDecoration: 'none'}}>
+              <a>94rain</a>
+            </Link>
           </li>
-          <li>
+          <li className="dark:hover:text-blue-400">
             Linkedin:{' '}
-            <a
-              className="mr-3 text-sm font-medium text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-              target="_blank"
-              href="https://www.linkedin.com/in/shuyang-ji/"
-              rel="noreferrer"
-            >
-              Shuyang Ji
-            </a>
+            <Link className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400" target="_blank" href="https://www.linkedin.com/in/shuyang-ji/" rel="noreferrer">
+              <a>Shuyang Ji</a>
+            </Link>
           </li>
-        </div>
       </div>
       {/* <div className="divide-y divide-gray-200 dark:divide-gray-700">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
@@ -95,7 +94,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                   <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                     <dl>
                       <dt className="sr-only">Published on</dt>
-                      <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="text-base leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date)}</time>
                       </dd>
                     </dl>
@@ -120,7 +119,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
                           {summary}
                         </div>
                       </div>
-                      <div className="text-base font-medium leading-6">
+                      <div className="text-base leading-6">
                         <Link
                           href={`/blog/${slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
@@ -138,7 +137,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         </ul> */}
       {/* </div> */}
       {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base font-medium leading-6">
+        <div className="flex justify-end text-base leading-6">
           <Link
             href="/blog"
             className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"

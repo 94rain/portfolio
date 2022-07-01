@@ -2,6 +2,8 @@ import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 
+let isProduction = process.env.NODE_ENV === 'production'
+
 export default function Footer() {
   return (
     <footer>
@@ -26,11 +28,15 @@ export default function Footer() {
             Built upon Next.js and Tailwind CSS, deployed with Github Actions
           </Link>
         </div>
-        <div style={{ display: 'none' }}>
-          <a href="https://clustrmaps.com/site/1bkv6" title="Visit tracker">
-            <img src="//www.clustrmaps.com/map_v2.png?d=0KyBA0hHgu2NUQjPjlIMWsMIM-tfQA7W2X_o3OA7NW8&cl=ffffff" />
-          </a>
-        </div>
+        {isProduction && (
+          <div style={{ display: 'none' }}>
+            <a href="https://clustrmaps.com/site/1bkv6" title="Visit tracker">
+              <img src="//www.clustrmaps.com/map_v2.png?d=0KyBA0hHgu2NUQjPjlIMWsMIM-tfQA7W2X_o3OA7NW8&cl=ffffff" />
+            </a>
+          </div>
+          )
+        }
+
       </div>
     </footer>
   )

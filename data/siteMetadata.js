@@ -3,7 +3,7 @@ const siteMetadata = {
   author: "Shuyang Ji",
   headerTitle: "Portfolio",
   description: "A portfolio created with Next.js and Tailwind.css",
-  introduction: "Hello. My name is Shuyang Ji. I am a junior undergraduate studying at University of Illinois at Urbana-Champaign.",
+  introduction: "Hello. My name is Shuyang Ji. I am a rising senior undergraduate student studying at University of Illinois at Urbana-Champaign.",
   language: "en-us",
   siteUrl: "https://sji15.web.illinois.edu",
   siteRepo: "https://github.com/94rain/portfolio",
