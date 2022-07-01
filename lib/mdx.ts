@@ -3,8 +3,6 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
 import readingTime from 'reading-time'
-import { visit } from 'unist-util-visit'
-import type { Pluggable } from 'unified'
 import getAllFilesRecursively from './utils/files'
 import { PostFrontMatter } from 'types/PostFrontMatter'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
@@ -13,14 +11,17 @@ import { Toc } from 'types/Toc'
 import remarkGfm from 'remark-gfm'
 import remarkFootnotes from 'remark-footnotes'
 import remarkMath from 'remark-math'
+import remarkExtractFrontmatter from './remark-extract-frontmatter'
 import remarkCodeTitles from './remark-code-title'
 import remarkTocHeadings from './remark-toc-headings'
-// import remarkImgToJsx from './remark-img-to-jsx'
+import remarkImgToJsx from './remark-img-to-jsx'
 // Rehype packages
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeKatex from 'rehype-katex'
+import rehypeCitation from 'rehype-citation'
 import rehypePrismPlus from 'rehype-prism-plus'
+import rehypePresetMinify from 'rehype-preset-minify'
 
 const root = process.cwd()
 
@@ -50,46 +51,39 @@ export async function getFileBySlug<T>(type: 'authors' | 'blog', slug: string | 
 
   // https://github.com/kentcdodds/mdx-bundler#nextjs-esbuild-enoent
   if (process.platform === 'win32') {
-    process.env.ESBUILD_BINARY_PATH = path.join(
-      process.cwd(),
-      'node_modules',
-      'esbuild',
-      'esbuild.exe'
-    )
+    process.env.ESBUILD_BINARY_PATH = path.join(root, 'node_modules', 'esbuild', 'esbuild.exe')
   } else {
-    process.env.ESBUILD_BINARY_PATH = path.join(
-      process.cwd(),
-      'node_modules',
-      'esbuild',
-      'bin',
-      'esbuild'
-    )
+    process.env.ESBUILD_BINARY_PATH = path.join(root, 'node_modules', 'esbuild', 'bin', 'esbuild')
   }
 
   const toc: Toc = []
 
-  const { frontmatter, code } = await bundleMDX(source, {
+  const { code, frontmatter } = await bundleMDX({
+    source,
     // mdx imports can be automatically source from the components directory
-    cwd: path.join(process.cwd(), 'components'),
-    xdmOptions(options) {
+    cwd: path.join(root, 'components'),
+    xdmOptions(options, frontmatter) {
       // this is the recommended way to add custom remark/rehype plugins:
       // The syntax might look weird, but it protects you in case we add/remove
       // plugins in the future.
       options.remarkPlugins = [
         ...(options.remarkPlugins ?? []),
+        remarkExtractFrontmatter,
         [remarkTocHeadings, { exportRef: toc }],
         remarkGfm,
         remarkCodeTitles,
         [remarkFootnotes, { inlineNotes: true }],
         remarkMath,
-        // remarkImgToJsx,
+        remarkImgToJsx,
       ]
       options.rehypePlugins = [
         ...(options.rehypePlugins ?? []),
         rehypeSlug,
         rehypeAutolinkHeadings,
         rehypeKatex,
-        [rehypePrismPlus, { ignoreMissing: true }] as Pluggable,
+        [rehypeCitation, { path: path.join(root, 'data') }],
+        [rehypePrismPlus, { ignoreMissing: true }],
+        rehypePresetMinify,
       ]
       return options
     },

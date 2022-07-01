@@ -23,7 +23,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       <div className="pt-6 pb-2 space-y-2 md:space-y-5"></div>
 
       <div className="items-start space-y-2 xl:grid xl:grid-cols-1 xl:gap-x-8 xl:space-y-0">
-        <div className="pt-4 pb-8 prose dark:prose-dark max-w-none xl:col-span-1"><h2>Hi, I am Shuyang Ji <span role="img" aria-label="waving hand" class="wave">👋</span></h2></div>
+        <div className="pt-4 pb-8 prose dark:prose-dark max-w-none xl:col-span-1"><h2>Hi, I am Shuyang 👋</h2></div>
           <div className="pt-4 pb-8 prose dark:prose-dark max-w-none xl:col-span-1"><h3>Bio</h3>
             <p>
               Hello, my name is Shuyang. I am a rising senior undergraduate student studying Mathematics and Computer Science at
@@ -48,8 +48,8 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             <div className="prose dark:prose-dark max-w-none xl:col-span-1"><h5>Some topics that I am also currently interested in exploring (more info):</h5></div>
             <li> Facilitate the process of production diagnosis and recovery: (Underinvestigated) Enhance the observability of data-intensive software systems? </li>
             <li> Infrastructure as Code: Terraform and Terraformer (reverse Terraform) </li>
-            <li> Improve Developer Experience from an HCI Perspective:{' '}            <Link href="mailto:sji15@illinois.edu">
-              <a>sji15@illinois.edu</a>
+            <li> Improve Developer Experience from an HCI Perspective:{' '} <Link href="mailto:sji15@illinois.edu">
+              <a className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">sji15@illinois.edu</a>
             </Link> </li>
           </p>
           </div>
@@ -137,7 +137,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         </ul> */}
       {/* </div> */}
       {posts.length > MAX_DISPLAY && (
-        <div className="flex justify-end text-base leading-6">
+        <div className="flex justify-end text-base font-medium leading-6">
           <Link
             href="/blog"
             className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
