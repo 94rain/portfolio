@@ -29,32 +29,39 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           <p>
             Hello, my name is Shuyang. I am a rising senior undergraduate student studying
             Mathematics and Computer Science at the University of Illinois at Urbana-Champaign. I
-            expect to graduate in May 2023.
+            expect to graduate in either August or December 2023.
+          </p>
+
+          <p className="text-blue-500 hover:text-blue-600">
+            I am on the industry job market! I am actively seeking full-time opportunities in
+            software engineering, infrastructure, and systems research and development.
+          </p>
+
+          <p>
+            During the Spring 2023 semester, I am participating in the Engineering City Scholars
+            Program and interning at HERE Technologies to contribute to the feature alignment
+            service re-architecture for the Unimap, an unveiled revolutionary and automated location
+            platform. For the upcoming Summer, I will intern at Splunk working on streaming
+            processing. See you in the Bay Area!
+          </p>
+
+          <p>
+            Before leaning more towards an industry career, I had the luck to spend some time
+            exploring systems research.
           </p>
         </div>
 
         <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
           <h3>Career interests</h3>
-          <p className="text-blue-500 hover:text-blue-600">
-            I am actively seeking full-time software engineer opportunties starting between June and
-            August 2023!
-          </p>
+
           <p>
             My interests broadly lie in the field of Systems and networking. I like designing and
-            building systems that address practical problems, ranging from high-level large scale
-            software systems to operating systems and architecture that support them.
+            building systems that address practical problems.
           </p>
+
           <p>
             <div className="prose max-w-none dark:prose-dark xl:col-span-1">
-              <h5>My current projects including:</h5>
-            </div>
-            <li> An operating system that can run on RISC-V (personal) </li>
-            <li> Cross-System Data Plane Testing (research) </li>
-            <li> IoT (Internet of Things) virtualization (research) </li>
-          </p>
-          <p>
-            <div className="prose max-w-none dark:prose-dark xl:col-span-1">
-              <h5>Some topics that I am also currently interested in exploring (more info):</h5>
+              <h5>Some topics that I am particularly interested in exploring (more info):</h5>
             </div>
             <li>
               {' '}
@@ -64,18 +71,21 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             <li> Infrastructure as Code: Terraform and Terraformer (reverse Terraform) </li>
             <li>
               {' '}
-              Improve Developer Experience from an HCI Perspective:{' '}
-              <Link href="mailto:sji15@illinois.edu">
+              Improve Developer Experience from an HCI Perspective{' '}
+              {/* <Link href="mailto:sji15@illinois.edu">
                 <a className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                   sji15@illinois.edu
                 </a>
-              </Link>{' '}
+              </Link>{' '} */}
             </li>
           </p>
         </div>
 
+        <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
+          <h3>Prior experience</h3>
+        </div>
         <div className="prose max-w-none pt-4 pb-4 dark:prose-dark xl:col-span-1">
-          <h3>Contact</h3>
+          <h3>Connect</h3>
         </div>
         <li className="dark:hover:text-blue-400">
           Email:{' '}

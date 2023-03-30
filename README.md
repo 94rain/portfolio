@@ -12,4 +12,4 @@ Development:
 `yarn start`
 
 Production:
-`next build && node ./scripts/generate-sitemap; next export`
+`yarn build && yarn export`
