@@ -40,7 +40,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           </p>
 
           <p>
-            Before leaning more towards an industry career, I had the luck to spend some time exploring systems research.
+            Before leaning more towards an industry career, I had the luck to spend some time exploring systems research, in topics including IoT virtualization, software testing, system reliability and storage systems.
           </p>
         </div>
 
