@@ -2,19 +2,21 @@ import Link from './Link'
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 export default function Footer() {
   return (
     <footer>
-      <div className="flex flex-col items-center mt-16">
-        <div className="flex mb-3 space-x-4">
+      <div className="mt-16 flex flex-col items-center">
+        <div className="mb-3 flex space-x-4">
           <SocialIcon kind="mail" href={`mailto:${siteMetadata.email}`} size={6} />
           <SocialIcon kind="github" href={siteMetadata.github} size={6} />
-          <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} />
+          {/* <SocialIcon kind="facebook" href={siteMetadata.facebook} size={6} /> */}
           {/* <SocialIcon kind="youtube" href={siteMetadata.youtube} size={6} /> */}
           <SocialIcon kind="linkedin" href={siteMetadata.linkedin} size={6} />
-          {/* <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} /> */}
+          <SocialIcon kind="twitter" href={siteMetadata.twitter} size={6} />
         </div>
-        <div className="flex mb-2 space-x-2 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mb-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
           <div>{siteMetadata.author}</div>
           <div>{` • `}</div>
           <div>{`© ${new Date().getFullYear()}`}</div>
@@ -23,14 +25,17 @@ export default function Footer() {
         </div>
         <div className="mb-8 text-sm text-gray-500 dark:text-gray-400">
           <Link href="https://github.com/94rain/portfolio">
-            Built upon Next.js and Tailwind CSS, deployed with Github Actions
+            Built upon Next.js and Tailwind CSS, deployed with Github Actions (Last Updated:{' '}
+            {new Date().toLocaleDateString()})
           </Link>
         </div>
-        <div style={{ display: 'none' }}>
-          <a href="https://clustrmaps.com/site/1bkv6" title="Visit tracker">
-            <img src="//www.clustrmaps.com/map_v2.png?d=0KyBA0hHgu2NUQjPjlIMWsMIM-tfQA7W2X_o3OA7NW8&cl=ffffff" />
-          </a>
-        </div>
+        {isProduction && (
+          <div style={{ display: 'none' }}>
+            <a href="https://clustrmaps.com/site/1bkv6" title="Visit tracker">
+              <img src="//www.clustrmaps.com/map_v2.png?d=0KyBA0hHgu2NUQjPjlIMWsMIM-tfQA7W2X_o3OA7NW8&cl=ffffff" />
+            </a>
+          </div>
+        )}
       </div>
     </footer>
   )

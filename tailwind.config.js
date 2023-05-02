@@ -6,8 +6,16 @@ const colors = require('tailwindcss/colors')
 
 /** @type {import("tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
-  mode: 'jit',
-  purge: ['./pages/**/*.tsx', './components/**/*.tsx', './layouts/**/*.tsx', './lib/**/*.ts'],
+  experimental: {
+    optimizeUniversalDefaults: true,
+  },
+  content: [
+    './pages/**/*.tsx',
+    './components/**/*.tsx',
+    './layouts/**/*.tsx',
+    './lib/**/*.ts',
+    './data/**/*.mdx',
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -21,11 +29,12 @@ module.exports = {
         14: '3.5rem',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        sans: ['InterVariable', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: colors.teal,
-        gray: colors.trueGray,
+        //@ts-ignore
+        gray: colors.neutral, // TODO: Remove ts-ignore after tw types gets updated to v3
       },
       typography: (theme) => ({
         DEFAULT: {
@@ -34,7 +43,7 @@ module.exports = {
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
-                color: theme('colors.primary.600'),
+                color: `${theme('colors.primary.600')} !important`,
               },
               code: { color: theme('colors.primary.400') },
             },
@@ -55,6 +64,9 @@ module.exports = {
             'h4,h5,h6': {
               color: theme('colors.gray.900'),
             },
+            pre: {
+              backgroundColor: theme('colors.gray.800'),
+            },
             code: {
               color: theme('colors.pink.500'),
               backgroundColor: theme('colors.gray.100'),
@@ -64,10 +76,10 @@ module.exports = {
               paddingBottom: '2px',
               borderRadius: '0.25rem',
             },
-            'code:before': {
+            'code::before': {
               content: 'none',
             },
-            'code:after': {
+            'code::after': {
               content: 'none',
             },
             details: {
@@ -79,11 +91,11 @@ module.exports = {
               borderRadius: '0.25rem',
             },
             hr: { borderColor: theme('colors.gray.200') },
-            'ol li:before': {
+            'ol li::marker': {
               fontWeight: '600',
               color: theme('colors.gray.500'),
             },
-            'ul li:before': {
+            'ul li::marker': {
               backgroundColor: theme('colors.gray.500'),
             },
             strong: { color: theme('colors.gray.600') },
@@ -99,7 +111,7 @@ module.exports = {
             a: {
               color: theme('colors.primary.500'),
               '&:hover': {
-                color: theme('colors.primary.400'),
+                color: `${theme('colors.primary.400')} !important`,
               },
               code: { color: theme('colors.primary.400') },
             },
@@ -120,6 +132,9 @@ module.exports = {
             'h4,h5,h6': {
               color: theme('colors.gray.100'),
             },
+            pre: {
+              backgroundColor: theme('colors.gray.800'),
+            },
             code: {
               backgroundColor: theme('colors.gray.800'),
             },
@@ -127,16 +142,18 @@ module.exports = {
               backgroundColor: theme('colors.gray.800'),
             },
             hr: { borderColor: theme('colors.gray.700') },
-            'ol li:before': {
+            'ol li::marker': {
               fontWeight: '600',
               color: theme('colors.gray.400'),
             },
-            'ul li:before': {
+            'ul li::marker': {
               backgroundColor: theme('colors.gray.400'),
             },
             strong: { color: theme('colors.gray.100') },
             thead: {
-              color: theme('colors.gray.100'),
+              th: {
+                color: theme('colors.gray.100'),
+              },
             },
             tbody: {
               tr: {
@@ -151,9 +168,6 @@ module.exports = {
         },
       }),
     },
-  },
-  variants: {
-    typography: ['dark'],
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 }

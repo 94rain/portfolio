@@ -1,5 +1,5 @@
 ---
-title: Biography
+title: Topics to explore
 date: '2021-07-12'
 tags: ['portfolio']
 draft: false
@@ -12,11 +12,9 @@ Hello, my name is Shuyang Ji. I am a rising senior undergraduate student studyin
 
 ## Career interests
 
-My interests broadly lie in the field of Systems and networking. 
+My interests broadly lie in the field of Systems and networking, Software Engineering and Programming languages. Recently I have been working on IoT virtualization, supervised by [Prof. Matthew Caesar](https://caesar.web.engr.illinois.edu/).
 
-{/* Recently I have been working on IoT virtualization, supervised by [Prof. Matthew Caesar](https://caesar.web.engr.illinois.edu/). */}
-
-I am passionate about building building blocks for software system and programming programs that program other programs. {/* And I plan to work in the field of computer systems and networking. */}
+I am passionate about building building blocks for software system and programming programs that program other programs. And I plan to work in the field of computer systems and networking. 
 
 
 ## Involvement
