@@ -27,32 +27,37 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
           <h3>Bio</h3>
           <p>
-            Hello, my name is Shuyang. I am a senior undergraduate student studying
-            Mathematics and Computer Science at the University of Illinois at Urbana-Champaign. I
-            expect to graduate in either August or December 2023.
+            Hello, my name is Shuyang. I am a senior undergraduate student studying Mathematics and
+            Computer Science at the University of Illinois at Urbana-Champaign. I expect to graduate
+            in either August or December 2023.
           </p>
 
           <p>
             During the Spring 2023 semester, I am participating in the Engineering City Scholars
             Program and interning at HERE Technologies to contribute to the feature alignment
-            service cloud re-architecture for the Unimap, an unveiled revolutionary and automated location
-            platform. For the upcoming Summer, I will intern at Splunk working on stream processing and OpenTelemetry. See you in the Bay Area!
+            service cloud re-architecture for the Unimap, an unveiled revolutionary and automated
+            location platform. For the upcoming Summer, I will intern at Splunk working on stream
+            processing and OpenTelemetry. See you in the Bay Area!
           </p>
 
           <p>
-            Before leaning more towards an industry career, I had the luck to spend some time exploring systems research, in topics including IoT virtualization, software testing, system reliability and storage systems.
+            Before leaning more towards an industry career, I had the luck to spend some time
+            exploring systems research, in topics including IoT virtualization, software testing,
+            system reliability and storage systems.
           </p>
         </div>
 
         <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
           <h3>Career interests</h3>
           <p className="text-blue-500 hover:text-blue-600">
-            I am on the job market! I am actively seeking opportunities in
-            software engineering, infrastructure, and systems research and development.
+            I am on the job market! I am actively seeking opportunities in software engineering,
+            infrastructure, and systems research and development.
           </p>
 
           <p>
-          I am a system and networking enthusiast with a passion for building and revamping systems to achieve greater resilience. I am currently focusing on streaming processing and observability.
+            I am a system and networking enthusiast with a passion for building and revamping
+            systems to achieve greater resilience. I am currently focusing on streaming processing
+            and observability.
           </p>
 
           {/* <p>
@@ -68,7 +73,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             <li>
               {' '}
               Improve Developer Experience from an HCI Perspective{' '} */}
-              {/* <Link href="mailto:sji15@illinois.edu">
+          {/* <Link href="mailto:sji15@illinois.edu">
                 <a className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                   sji15@illinois.edu
                 </a>
