@@ -33,7 +33,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           </p>
 
           <p>
-            During the Spring 2023 semester, I am participating in the {' '}
+            During the Spring 2023 semester, I am participating in the{' '}
             <a
               className="focusable rounded-sm font-medium text-zinc-800 underline decoration-red-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white dark:decoration-sky-400 dark:hover:text-sky-400 dark:hover:decoration-sky-400/30 dark:focus:text-sky-400 dark:focus:ring-sky-400/40"
               href="https://cityscholars.engineering.illinois.edu/"
@@ -42,7 +42,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             >
               Engineering City Scholars Program
             </a>{' '}
-            and interning at {' '}
+            and interning at{' '}
             <a
               className="focusable rounded-sm font-medium text-zinc-800 underline decoration-green-500 decoration-2 underline-offset-2 transition duration-100 hover:text-green-500 hover:decoration-green-500/30 focus:text-lime-500 focus:ring-lime-500/40 dark:text-white dark:decoration-lime-400 dark:hover:text-lime-400 dark:hover:decoration-lime-400/30 dark:focus:text-lime-400 dark:focus:ring-lime-400/40"
               href="https://www.here.com/"
@@ -51,11 +51,9 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             >
               HERE Technologies
             </a>{' '}
-            
-            
-            to contribute to the feature alignment
-            service cloud re-architecture for the Unimap, an emerging revolutionary and automated
-            location platform. For the upcoming Summer, I will intern at {' '}
+            to contribute to the feature alignment service cloud re-architecture for the Unimap, an
+            emerging revolutionary and automated location platform. For the upcoming Summer, I will
+            intern at{' '}
             <a
               className="focusable rounded-sm font-medium text-zinc-800 underline decoration-orange-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white dark:decoration-sky-400 dark:hover:text-sky-400 dark:hover:decoration-sky-400/30 dark:focus:text-sky-400 dark:focus:ring-sky-400/40"
               href="https://www.Splunk.com/"
@@ -63,8 +61,8 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               target="_blank"
             >
               Splunk
-            </a>{' '} working on stream
-            processing and {' '}
+            </a>{' '}
+            working on stream processing and{' '}
             <a
               className="focusable rounded-sm font-medium text-zinc-800 underline decoration-blue-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white dark:decoration-sky-400 dark:hover:text-sky-400 dark:hover:decoration-sky-400/30 dark:focus:text-sky-400 dark:focus:ring-sky-400/40"
               href="https://opentelemetry.io/"
@@ -72,10 +70,9 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
               target="_blank"
             >
               OpenTelemetry
-            </a>. See you in the Bay Area!
+            </a>
+            . See you in the Bay Area!
           </p>
-
-
         </div>
 
         <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
