@@ -18,11 +18,17 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
   return (
     <>
       <PageSEO title={siteMetadata.title} description={siteMetadata.description} />
-      <div className="space-y-2 pt-6 pb-2 md:space-y-5"></div>
 
       <div className="items-start space-y-2 xl:grid xl:grid-cols-1 xl:gap-x-8 xl:space-y-0">
-        <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
-          <h2>Hi, I am Shuyang 👋</h2>
+        {/* <div className="mb-8 bg-gradient-to-r from-yellow-600 to-red-600 bg-clip-text text-base font-extrabold leading-normal tracking-tight text-transparent dark:bg-gradient-to-l dark:from-emerald-500 dark:to-lime-600 md:text-lg md:leading-normal">
+          <h2>
+            Hi, I am Shuyang <span style={{ color: '#A5B4FC' }}>👋</span>
+          </h2>
+        </div> */}
+        <div className="mb-8 bg-gradient-to-r from-yellow-600 to-red-600 bg-clip-text text-2xl font-extrabold leading-normal tracking-tight text-transparent dark:bg-gradient-to-l dark:from-emerald-500 dark:to-lime-600 md:text-4xl md:leading-normal">
+          <h2>
+            Hi, I am Shuyang <span style={{ color: '#A5B4FC' }}>👋</span>
+          </h2>
         </div>
         <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
           <h3>Bio</h3>
@@ -35,7 +41,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
           <p>
             During the Spring 2023 semester, I am participating in the{' '}
             <a
-              className="focusable rounded-sm font-medium text-zinc-800 underline decoration-red-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white dark:decoration-sky-400 dark:hover:text-sky-400 dark:hover:decoration-sky-400/30 dark:focus:text-sky-400 dark:focus:ring-sky-400/40"
+              className="focusable rounded-sm font-medium text-zinc-800 underline decoration-red-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white"
               href="https://cityscholars.engineering.illinois.edu/"
               rel="noreferrer"
               target="_blank"
@@ -44,27 +50,34 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             </a>{' '}
             and interning at{' '}
             <a
-              className="focusable rounded-sm font-medium text-zinc-800 underline decoration-green-500 decoration-2 underline-offset-2 transition duration-100 hover:text-green-500 hover:decoration-green-500/30 focus:text-lime-500 focus:ring-lime-500/40 dark:text-white dark:decoration-lime-400 dark:hover:text-lime-400 dark:hover:decoration-lime-400/30 dark:focus:text-lime-400 dark:focus:ring-lime-400/40"
+              className="focusable rounded-sm font-medium text-zinc-800 underline decoration-green-500 decoration-2 underline-offset-2 transition duration-100 hover:text-green-500 hover:decoration-green-500/30 focus:text-lime-500 focus:ring-lime-500/40 dark:text-white"
               href="https://www.here.com/"
               rel="noreferrer"
               target="_blank"
             >
               HERE Technologies
             </a>{' '}
-            to contribute to the feature alignment service cloud re-architecture for the Unimap, an
+            to contribute to the feature alignment service cloud re-architecture for the{' '}<a
+              className="focusable rounded-sm font-medium text-zinc-800 underline decoration-orange-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white"
+              href="https://www.here.com/about/press-releases/en/here-introduces-unimap-to-revolutionize-how-maps-are-created-updated-and"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Unimap
+            </a>, an
             emerging revolutionary and automated location platform. For the upcoming Summer, I will
             intern at{' '}
             <a
-              className="focusable rounded-sm font-medium text-zinc-800 underline decoration-orange-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white dark:decoration-sky-400 dark:hover:text-sky-400 dark:hover:decoration-sky-400/30 dark:focus:text-sky-400 dark:focus:ring-sky-400/40"
+              className="focusable rounded-sm font-medium text-zinc-800 underline decoration-orange-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white"
               href="https://www.Splunk.com/"
               rel="noreferrer"
               target="_blank"
             >
               Splunk
             </a>{' '}
-            working on stream processing and{' '}
+            working on {' '}
             <a
-              className="focusable rounded-sm font-medium text-zinc-800 underline decoration-blue-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white dark:decoration-sky-400 dark:hover:text-sky-400 dark:hover:decoration-sky-400/30 dark:focus:text-sky-400 dark:focus:ring-sky-400/40"
+              className="focusable rounded-sm font-medium text-zinc-800 underline decoration-blue-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white"
               href="https://opentelemetry.io/"
               rel="noreferrer"
               target="_blank"
@@ -78,13 +91,13 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
           <h3>Career interests</h3>
           <p className="text-blue-500 hover:text-blue-600">
-            I am on the job market! I am actively seeking opportunities in software engineering,
+            I am actively seeking full-time opportunities in software engineering,
             infrastructure, and systems research and development.
           </p>
 
           <p>
             I am a system and networking enthusiast with a passion for building and revamping
-            systems to achieve greater resilience. I am currently focusing on streaming processing
+            systems to achieve greater resilience. I am currently studying streaming processing
             and observability.
           </p>
 

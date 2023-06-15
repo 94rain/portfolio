@@ -8,15 +8,23 @@ images: ['/static/images/canada/mountains.jpg', '/static/images/canada/toronto.j
 layout: PostSimple
 ---
 
-Hello, my name is Shuyang Ji. I am a rising senior undergraduate student studying [Mathematics and Computer Science](https://cs.illinois.edu/academics/undergraduate/degree-program-options/bs-mathematics-computer-science) at the [University of Illinois at Urbana-Champaign](https://illinois.edu/), expecting to graduate in May 2023.
+Hello, my name is Shuyang Ji. I am a senior undergraduate student studying [Mathematics and Computer Science](https://cs.illinois.edu/academics/undergraduate/degree-program-options/bs-mathematics-computer-science) at the [University of Illinois at Urbana-Champaign](https://illinois.edu/). I expect to graduate in either August or December 2023.
 
 ## Career interests
 
-My interests broadly lie in the field of Systems and networking. 
+I am on the job market! I am actively seeking opportunities in software engineering, infrastructure, and systems research and development.
 
-{/* Recently I have been working on IoT virtualization, supervised by [Prof. Matthew Caesar](https://caesar.web.engr.illinois.edu/). */}
+I am a system and networking enthusiast with a passion for building and revamping systems to achieve greater resilience. I am currently studying streaming processing and observability.
 
-I am passionate about building building blocks for software system and programming programs that program other programs. {/* And I plan to work in the field of computer systems and networking. */}
+
+
+## Previous experience
+
+During the Spring 2023 semester, I am participating in the [Engineering City Scholars Program](https://cityscholars.engineering.illinois.edu/) and interning at [HERE Technologies](https://www.here.com/) to contribute to the feature alignment service cloud re-architecture for the [Unimap](https://www.here.com/about/press-releases/en/here-introduces-unimap-to-revolutionize-how-maps-are-created-updated-and), an emerging revolutionary and automated location platform. For the upcoming Summer, I will intern at [Splunk](https://www.Splunk.com/) working on stream processing and [OpenTelemetry](https://opentelemetry.io/). See you in the Bay Area!
+
+During the summer of 2022, I worked at [Ploomber](https://github.com/ploomber), a [Y Combinator](https://www.ycombinator.com/) backed startup, where I worked on building a framework and cloud services to make it easier for data scientists to build data pipelines.
+
+Before leaning more towards an industry career, I had the luck to spend some time exploring systems research, in topics including IoT virtualization, software testing, system reliability and storage systems.
 
 
 ## Involvement

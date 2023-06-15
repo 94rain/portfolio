@@ -7,7 +7,7 @@ const projectsData = [
   },
   {
     title: 'Fail through the Cracks: Cross-System Interaction Failures in Modern Cloud Systems',
-    description: `Our work presents an emerging failure mode, cross-system interaction (CSI) failures, and its first in-depth analysis from public cloud and widely co-deployed open-source systems. We discussed approaches to investigate for cross-system testing and analysis. As a feasibility study, we developed a data-plane cross-system testing tool for Spark and Hive, and it exposed 15 discrepancies between interacting systems, of which 9 have been acknowledged by developers. Our work has been recognized and accepted at Eurosys'23 conference.`,
+    description: `This work presents an emerging failure mode, cross-system interaction (CSI) failures, and its first in-depth analysis from public cloud and widely co-deployed open-source systems. We discussed approaches to investigate for cross-system testing and analysis. As a feasibility study, we developed a data-plane cross-system testing tool for Spark and Hive, and it exposed 15 discrepancies between interacting systems, of which 9 have been acknowledged by developers. This work has been recognized and accepted at Eurosys'23 conference.`,
     // imgSrc: '/static/images/online-collaborative-editor.png',
     href: 'https://github.com/xlab-uiuc/csi-ae',
   },
