@@ -38,7 +38,8 @@ export function BuiltWith() {
         className="text-gray-500 underline underline-offset-4 dark:text-gray-400"
       >
         <span className="umami--click--view-source">
-          Last Updated: {new Date().toLocaleDateString()}
+          Last Updated: 5/3/2023
+          {/* {new Date().toLocaleDateString()} */}
         </span>
       </Link>
     </div>
