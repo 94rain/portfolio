@@ -57,16 +57,17 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             >
               HERE Technologies
             </a>{' '}
-            to contribute to the feature alignment service cloud re-architecture for the{' '}<a
+            to contribute to the feature alignment service cloud re-architecture for the{' '}
+            <a
               className="focusable rounded-sm font-medium text-zinc-800 underline decoration-orange-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white"
               href="https://www.here.com/about/press-releases/en/here-introduces-unimap-to-revolutionize-how-maps-are-created-updated-and"
               rel="noreferrer"
               target="_blank"
             >
               Unimap
-            </a>, an
-            emerging revolutionary and automated location platform. For the upcoming Summer, I will
-            intern at{' '}
+            </a>
+            , an emerging revolutionary and automated location platform. For the upcoming Summer, I
+            will intern at{' '}
             <a
               className="focusable rounded-sm font-medium text-zinc-800 underline decoration-orange-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white"
               href="https://www.Splunk.com/"
@@ -75,7 +76,7 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
             >
               Splunk
             </a>{' '}
-            working on {' '}
+            working on{' '}
             <a
               className="focusable rounded-sm font-medium text-zinc-800 underline decoration-blue-500 decoration-2 underline-offset-2 transition duration-100 hover:text-blue-500 hover:decoration-sky-500/30 focus:text-blue-500 focus:ring-sky-500/40 dark:text-white"
               href="https://opentelemetry.io/"
@@ -91,14 +92,14 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <div className="prose max-w-none pt-4 pb-8 dark:prose-dark xl:col-span-1">
           <h3>Career interests</h3>
           <p className="text-blue-500 hover:text-blue-600">
-            I am actively seeking full-time opportunities in software engineering,
-            infrastructure, and systems research and development.
+            I am actively seeking full-time opportunities in software engineering, infrastructure,
+            and systems research and development.
           </p>
 
           <p>
             I am a system and networking enthusiast with a passion for building and revamping
-            systems to achieve greater resilience. I am currently studying streaming processing
-            and observability.
+            systems to achieve greater resilience. I am currently studying streaming processing and
+            observability.
           </p>
 
           <p>

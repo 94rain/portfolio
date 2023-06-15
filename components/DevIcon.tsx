@@ -35,7 +35,7 @@ export const DevIconsMap = {
   Spotify,
   Github,
   Actions,
-  CreativeCommons
+  CreativeCommons,
 }
 
 export function DevIcon(props: { type: keyof typeof DevIconsMap; className?: string }) {

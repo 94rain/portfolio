@@ -12,7 +12,6 @@ export default function Footer() {
       <div className="mb-8 mt-16 items-center justify-between space-y-4 md:mb-10 md:flex md:space-y-0">
         <BuiltWith />
         <div className="my-2 flex space-x-2 text-sm text-gray-500 dark:text-gray-400">
-
           <div>{`Licensed under CC-BY-SA 4.0`}</div>
           <Link href="https://creativecommons.org/licenses/by-sa/4.0/" className="pl-px">
             <DevIcon type="CreativeCommons" className="h-5 w-5" />
