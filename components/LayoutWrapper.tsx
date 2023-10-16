@@ -4,6 +4,7 @@ import Logo from '@/data/logo.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
+import Header from './Header'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import { ReactNode } from 'react'
@@ -15,8 +16,9 @@ interface Props {
 const LayoutWrapper = ({ children }: Props) => {
   return (
     <SectionContainer>
-      <div className="flex h-screen flex-col justify-between">
-        <header className="flex items-center justify-between py-10">
+      <div className={`flex h-screen flex-col justify-between font-sans`}>
+      {/* <div className="flex h-screen flex-col justify-between"> */}
+        {/* <header className="flex items-center justify-between py-10">
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
@@ -48,7 +50,8 @@ const LayoutWrapper = ({ children }: Props) => {
             <ThemeSwitch />
             <MobileNav />
           </div>
-        </header>
+        </header> */}
+        <Header />
         <main className="mb-auto">{children}</main>
         <Footer />
       </div>

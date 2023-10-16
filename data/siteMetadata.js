@@ -1,7 +1,7 @@
 const siteMetadata = {
-  title: 'Portfolio',
+  title: 'Shuyang\'s Zone',
   author: 'Shuyang Ji',
-  headerTitle: 'Portfolio',
+  headerTitle: 'Shuyang\'s Zone',
   description: 'A portfolio created with Next.js and Tailwind.css',
   language: 'en-us',
   theme: 'system', // system, dark or light
